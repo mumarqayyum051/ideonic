@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script src="./Calculator/calculator.js"></script>
+    <title>Calculator</title>
+    <style>
+      .list_items {
+        width: 200px;
+      }
+      li {
+        width: 200px;
+      }
+
+      .list_items:not:first-child {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tip Calculator</h1>
+    <div class="calculator">
+      How much was your bill?: <br />
+      <b>$</b>
+      <input type="number" id="billedamount" placeholder="Bill Amount" />
+      <br /><br />
+      How was your service? <br /><br />
+      <select name="service_selector" id="service">
+        <option value="excellent">---Choose an Option---</option>
+        <option value="1">Fine</option>
+        <option value="2">Bad</option>
+        <option value="3">Poor</option>
+      </select>
+      <br /><br />
+      How many people are sharing the bill? <br />
+      <input type="number" id="people" placeholder="Number of people" /> <br />
+      <button id="calculate" onclick="Bill_Calculator()">Calculate Bill</button>
+      <button id="calculate2" onclick="Tip_Calculator()">Calculate Tip</button>
+      <br /><br />
+      Billed amount:
+      <p id="results"></p>
+      <br /><br />
+      Tip amount:
+      <p class="results2"></p>
+    </div>
+  </body>
+</html>
