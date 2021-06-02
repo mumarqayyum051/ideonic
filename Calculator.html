@@ -1,45 +1,130 @@
 <html>
   <head>
-    <script src="./Calculator/calculator.js"></script>
     <title>Calculator</title>
     <style>
-      .list_items {
-        width: 200px;
+      .buttons {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: #2196f3;
+        width: 250px;
       }
-      li {
-        width: 200px;
+      .grid-item {
+        padding: 5px;
+        font-size: 30px;
+        text-align: center;
       }
-
-      .list_items:not:first-child {
-        display: none;
+      .grid-item:hover {
+        cursor: pointer;
+      }
+      #inputfield {
+        height: 60px;
+        width: 250px;
+        font-size: 30px;
       }
     </style>
   </head>
   <body>
-    <h1>Tip Calculator</h1>
-    <div class="calculator">
-      How much was your bill?: <br />
-      <b>$</b>
-      <input type="number" id="billedamount" placeholder="Bill Amount" />
-      <br /><br />
-      How was your service? <br /><br />
-      <select name="service_selector" id="service">
-        <option value="excellent">---Choose an Option---</option>
-        <option value="1">Fine</option>
-        <option value="2">Bad</option>
-        <option value="3">Poor</option>
-      </select>
-      <br /><br />
-      How many people are sharing the bill? <br />
-      <input type="number" id="people" placeholder="Number of people" /> <br />
-      <button id="calculate" onclick="Bill_Calculator()">Calculate Bill</button>
-      <button id="calculate2" onclick="Tip_Calculator()">Calculate Tip</button>
-      <br /><br />
-      Billed amount:
-      <p id="results"></p>
-      <br /><br />
-      Tip amount:
-      <p class="results2"></p>
-    </div>
+    <form name="calculator">
+      Entered Value: <br />
+      <input type="text" id="inputfield" disabled />
+      <div class="buttons">
+        <input
+          value="1"
+          type="button"
+          onclick="calculator.inputfield.value += '1' "
+          class="grid-item"
+        />
+        <input
+          value="2"
+          type="button"
+          onclick="calculator.inputfield.value += '2' "
+          class="grid-item"
+        />
+        <input
+          value="3"
+          type="button"
+          onclick="calculator.inputfield.value += '3' "
+          class="grid-item"
+        />
+        <input
+          value="4"
+          type="button"
+          onclick="calculator.inputfield.value += '4' "
+          class="grid-item"
+        />
+        <input
+          value="5"
+          type="button"
+          onclick="calculator.inputfield.value += '5' "
+          class="grid-item"
+        />
+        <input
+          value="6"
+          type="button"
+          onclick="calculator.inputfield.value += '6' "
+          class="grid-item"
+        />
+        <input
+          value="7"
+          type="button"
+          onclick="calculator.inputfield.value += '7' "
+          class="grid-item"
+        />
+        <input
+          value="8"
+          type="button"
+          onclick="calculator.inputfield.value += '8' "
+          class="grid-item"
+        />
+        <input
+          value="9"
+          type="button"
+          onclick="calculator.inputfield.value += '9' "
+          class="grid-item"
+        />
+        <input
+          value="0"
+          type="button"
+          onclick="calculator.inputfield.value += '0' "
+          class="grid-item"
+        />
+        <input
+          value="+"
+          type="button"
+          onclick="calculator.inputfield.value += '+' "
+          class="grid-item"
+        />
+        <input
+          value="-"
+          type="button"
+          onclick="calculator.inputfield.value += '-' "
+          class="grid-item"
+        />
+        <input
+          value="*"
+          type="button"
+          onclick="calculator.inputfield.value += '*' "
+          class="grid-item"
+        />
+        <input
+          value="/"
+          type="button"
+          onclick="calculator.inputfield.value += '/' "
+          class="grid-item"
+        />
+        <input
+          type="button"
+          value="="
+          onclick="calculator.inputfield.value = eval(calculator.inputfield.value)"
+          class="grid-item"
+        />
+        <input
+          type="button"
+          value="Clear"
+          onclick="calculator.inputfield.value = '' "
+          class="grid-item"
+        />
+      </div>
+    </form>
   </body>
 </html>
